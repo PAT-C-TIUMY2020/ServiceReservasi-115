@@ -127,7 +127,7 @@ namespace ServiceReservasi
             try
             {
                 string sql = "select ID_reservasi, Nama_customer, No_telpon," +
-                    "Jumlah_pemesanan, Nama_Lokasi from dbo.Pemesanan p join dbo.Lokasi 1 on p.ID_lokasi = 1.ID_lokasi";
+                    "Jumlah_pemesanan, Nama_Lokasi from dbo.Pemesanan p join dbo.Lokasi l on p.ID_lokasi = l.ID_lokasi";
                 connection = new SqlConnection(constring); // fungsi konek ke database
                 com = new SqlCommand(sql, connection); //proses execute query
                 connection.Open(); //membuka koneksi
